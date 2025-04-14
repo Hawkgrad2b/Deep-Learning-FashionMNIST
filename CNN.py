@@ -3,7 +3,6 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torchsummary import summary  # Optional, for printing model config
 
 class CNN(nn.Module):
     def __init__(self):
@@ -64,7 +63,3 @@ class CNN(nn.Module):
         x = F.relu(self.fc2(x))               # Apply the second fully connected layer
         x = self.fc3(x)                       # No softmax here because CrossEntropyLoss expects raw logits
         return x                              # The output is the raw logits for each class
-
-
-model = CNN()
-print(model)

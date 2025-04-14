@@ -1,0 +1,66 @@
+2025-04-14 09:41:54,270 - INFO - === Running Task 1 Experiments ===
+2025-04-14 09:41:54,273 - INFO - Model Architecture: CNN(
+  (conv1): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (pool1): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv2): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2))
+  (pool2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (pool3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (fc1): Linear(in_features=1024, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=10, bias=True)
+)
+2025-04-14 09:41:54,274 - INFO - Model successfully initialized.
+2025-04-14 09:41:54,274 - INFO - === Running Task 2 Experiments ===
+2025-04-14 09:41:54,314 - INFO - 
+Training with Validation Split: 0%
+2025-04-14 09:41:54,380 - INFO - DataLoaders initialized with batch size 64 and val_split 0.0
+2025-04-14 09:41:54,380 - INFO - Train dataset size: 60000
+2025-04-14 09:44:50,688 - INFO - === Running Task 1 Experiments ===
+2025-04-14 09:44:50,692 - INFO - Model Architecture: CNN(
+  (conv1): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (pool1): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv2): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2))
+  (pool2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (pool3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (fc1): Linear(in_features=1024, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=10, bias=True)
+)
+2025-04-14 09:44:50,692 - INFO - Model successfully initialized.
+2025-04-14 09:44:50,692 - INFO - === Running Task 2 Experiments ===
+2025-04-14 09:44:50,718 - INFO - 
+Training with Validation Split: 0%
+2025-04-14 09:44:50,753 - INFO - DataLoaders initialized with batch size 64 and val_split 0.0
+2025-04-14 09:47:39,596 - INFO - Training completed for 0% validation split.
+2025-04-14 09:47:41,955 - INFO - Test Accuracy with 0% val split: 0.8332
+2025-04-14 09:47:41,955 - INFO - 
+Training with Validation Split: 10%
+2025-04-14 09:47:41,998 - INFO - DataLoaders initialized with batch size 64 and val_split 0.1
+2025-04-14 09:50:04,777 - INFO - Training completed for 10% validation split.
+2025-04-14 09:50:06,925 - INFO - Test Accuracy with 10% val split: 0.8647
+2025-04-14 09:50:06,925 - INFO - 
+Training with Validation Split: 20%
+2025-04-14 09:50:06,977 - INFO - DataLoaders initialized with batch size 64 and val_split 0.2
+2025-04-14 09:52:13,149 - INFO - Training completed for 20% validation split.
+2025-04-14 09:52:15,520 - INFO - Test Accuracy with 20% val split: 0.8575
+2025-04-14 09:52:15,520 - INFO - 
+Training with Validation Split: 30%
+2025-04-14 09:52:15,567 - INFO - DataLoaders initialized with batch size 64 and val_split 0.3
+2025-04-14 09:54:03,112 - INFO - Training completed for 30% validation split.
+2025-04-14 09:54:05,219 - INFO - Test Accuracy with 30% val split: 0.8401
+2025-04-14 09:54:05,219 - INFO - 
+Training with Validation Split: 40%
+2025-04-14 09:54:05,259 - INFO - DataLoaders initialized with batch size 64 and val_split 0.4
+2025-04-14 09:55:39,119 - INFO - Training completed for 40% validation split.
+2025-04-14 09:55:41,212 - INFO - Test Accuracy with 40% val split: 0.8324
+2025-04-14 09:55:41,212 - INFO - 
+=== Summary of Results ===
+2025-04-14 09:55:41,212 - INFO - Val Split: 0% | Test Accuracy: 0.8332
+2025-04-14 09:55:41,212 - INFO - Val Split: 10% | Test Accuracy: 0.8647
+2025-04-14 09:55:41,213 - INFO - Val Split: 20% | Test Accuracy: 0.8575
+2025-04-14 09:55:41,213 - INFO - Val Split: 30% | Test Accuracy: 0.8401
+2025-04-14 09:55:41,213 - INFO - Val Split: 40% | Test Accuracy: 0.8324

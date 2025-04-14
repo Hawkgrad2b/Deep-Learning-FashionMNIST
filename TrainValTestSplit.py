@@ -3,12 +3,7 @@
 
 import torch
 import torch.nn as nn
-import torch.optim as optim
-import torch.nn.functional as F
-from torchvision import datasets, transforms
-from torch.utils.data import DataLoader, random_split
 from sklearn.metrics import accuracy_score
-import numpy as np
 from CNN import CNN  # Assuming CNN.py is in the same directory
 from FashionMNISTLoader import FashionMNISTLoader  # Assuming FashionMNISTLoader.py is in the same directory
 
@@ -89,32 +84,6 @@ class Trainer:
 
 # === Running Task 2 Experiments ===
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu") # Set device to GPU if available, else CPU
-splits = [0.0, 0.1, 0.2, 0.3, 0.4] # Validation splits to test
-results = []
-
-for split in splits:
-    print(f"\nTraining with Validation Split: {int(split*100)}%")
-    
-    loader = FashionMNISTLoader(batch_size=64, val_split=split) # Initialize the data loader with the current split
-
-    train_loader, val_loader, test_loader = loader.get_loaders() # Get the data loaders
-
-    model = CNN() # Initialize the model
-
-    trainer = Trainer(model, train_loader, test_loader, val_loader, device=device) # Initialize the trainer
-
-    trainer.train(epochs=10) # Train the model
-
-    acc = trainer.evaluate() # Evaluate the model on the test set
-
-    print(f"Test Accuracy with {int(split*100)}% val split: {acc:.4f}") # Print the test accuracy
-    results.append((split, acc))
-
-# Optional: Print result summary
-print("\n=== Summary of Results ===")
-for split, acc in results:
-    print(f"Val Split: {int(split*100)}% | Test Accuracy: {acc:.4f}")
 
 
 """
