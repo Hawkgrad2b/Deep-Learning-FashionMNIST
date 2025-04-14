@@ -30,6 +30,8 @@ Training with Validation Split: 0%
   (fc2): Linear(in_features=256, out_features=128, bias=True)
   (fc3): Linear(in_features=128, out_features=10, bias=True)
 )
+
+
 2025-04-14 09:44:50,692 - INFO - Model successfully initialized.
 2025-04-14 09:44:50,692 - INFO - === Running Task 2 Experiments ===
 2025-04-14 09:44:50,718 - INFO - 
@@ -64,3 +66,41 @@ Training with Validation Split: 40%
 2025-04-14 09:55:41,213 - INFO - Val Split: 20% | Test Accuracy: 0.8575
 2025-04-14 09:55:41,213 - INFO - Val Split: 30% | Test Accuracy: 0.8401
 2025-04-14 09:55:41,213 - INFO - Val Split: 40% | Test Accuracy: 0.8324
+2025-04-14 14:40:06,344 - INFO - 
+
+=== Running Task 3 Experiments ===
+2025-04-14 14:40:06,345 - INFO - 
+Training with Learning Rate: 0.001
+2025-04-14 14:40:06,387 - INFO - DataLoaders initialized with batch size 64 and val_split 0.1
+2025-04-14 14:40:59,723 - INFO - 
+=== Running Task 3 Experiments ===
+2025-04-14 14:40:59,747 - INFO - 
+Training with Learning Rate: 0.001
+2025-04-14 14:40:59,786 - INFO - DataLoaders initialized with batch size 64 and val_split 0.1
+2025-04-14 14:44:02,993 - INFO - 
+=== Running Task 3 Experiments ===
+2025-04-14 14:44:03,017 - INFO - 
+Training with Learning Rate: 0.001
+2025-04-14 14:44:03,060 - INFO - DataLoaders initialized with batch size 64 and val_split 0.1
+2025-04-14 14:46:39,119 - INFO - Training completed for learning rate 0.001.
+2025-04-14 14:46:41,551 - INFO - Test Accuracy with learning rate 0.001: 0.6739
+2025-04-14 14:46:41,552 - INFO - 
+Training with Learning Rate: 0.01
+2025-04-14 14:46:41,607 - INFO - DataLoaders initialized with batch size 64 and val_split 0.1
+2025-04-14 14:49:14,063 - INFO - Training completed for learning rate 0.01.
+2025-04-14 14:49:16,275 - INFO - Test Accuracy with learning rate 0.01: 0.8622
+2025-04-14 14:49:16,275 - INFO - 
+Training with Learning Rate: 0.1
+2025-04-14 14:49:16,309 - INFO - DataLoaders initialized with batch size 64 and val_split 0.1
+2025-04-14 14:51:51,774 - INFO - Training completed for learning rate 0.1.
+2025-04-14 14:51:54,355 - INFO - Test Accuracy with learning rate 0.1: 0.9149
+2025-04-14 14:51:54,355 - INFO - 
+Training with Learning Rate: 1
+2025-04-14 14:51:54,391 - INFO - DataLoaders initialized with batch size 64 and val_split 0.1
+2025-04-14 14:54:28,965 - INFO - Training completed for learning rate 1.
+2025-04-14 14:54:31,410 - INFO - Test Accuracy with learning rate 1: 0.1000
+2025-04-14 14:54:31,411 - INFO - 
+Training with Learning Rate: 10
+2025-04-14 14:54:31,461 - INFO - DataLoaders initialized with batch size 64 and val_split 0.1
+2025-04-14 14:57:16,922 - INFO - Training completed for learning rate 10.
+2025-04-14 14:57:19,573 - INFO - Test Accuracy with learning rate 10: 0.1000
