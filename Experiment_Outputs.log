@@ -13,6 +13,8 @@
   (fc3): Linear(in_features=128, out_features=10, bias=True)
 )
 2025-04-15 11:36:38,112 - INFO - Model successfully initialized.
+
+
 2025-04-15 11:36:38,112 - INFO - === Running Task 2 Experiments ===
 2025-04-15 11:36:38,138 - INFO - 
 Training with Validation Split: 0%
@@ -47,6 +49,8 @@ Training with Validation Split: 40%
 2025-04-15 11:48:14,022 - INFO - Val Split: 30% | Test Accuracy: 0.8315
 2025-04-15 11:48:14,023 - INFO - Val Split: 40% | Test Accuracy: 0.8175
 2025-04-15 11:48:14,023 - INFO - 
+
+
 === Running Task 3 Experiments ===
 2025-04-15 11:48:14,023 - INFO - 
 Training with Learning Rate: 0.001
@@ -74,12 +78,16 @@ Training with Learning Rate: 10
 2025-04-15 12:01:15,075 - INFO - Training completed for learning rate 10.
 2025-04-15 12:01:17,710 - INFO - Test Accuracy with learning rate 10: 0.1000
 2025-04-15 12:01:17,711 - INFO - 
+
+
 === Running Task 4 Experiments ===
 2025-04-15 12:01:17,711 - INFO - 
 Training with Learning Rate: 0.1
 2025-04-15 12:01:17,751 - INFO - DataLoaders initialized with batch size 64 and val_split 0.1
 2025-04-15 12:03:55,536 - INFO - Test Accuracy with Adam optimizer: 0.1000
 2025-04-15 12:03:55,537 - INFO - 
+
+
 === Running Task 5: One-vs-All AUC Evaluation ===
 2025-04-15 12:03:55,578 - INFO - DataLoaders initialized with batch size 64 and val_split 0.1
 2025-04-15 12:06:31,685 - INFO - AUC Score (class 2 vs all): 0.9910

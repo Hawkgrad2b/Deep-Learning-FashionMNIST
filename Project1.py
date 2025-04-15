@@ -133,7 +133,7 @@ best_learning_rate = 0.1
 # Load data
 loader = FashionMNISTLoader(batch_size=64, val_split=best_val_split)
 train_loader, val_loader, test_loader = loader.get_loaders()
-logging.info(f"DataLoaders initialized with batch size 64 and val_split {best_val_split}")
+logging.info(f"DataLoaders initialized with batch size 64 and val_split {best_val_split} and learning rate {best_learning_rate}")
 
 # Initialize model and optimizer
 model = CNN()
