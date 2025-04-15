@@ -54,7 +54,7 @@ for split, acc in results:
     logging.info(f"Val Split: {int(split*100)}% | Test Accuracy: {acc:.4f}")
     print(f"Val Split: {int(split*100)}% | Test Accuracy: {acc:.4f}")
 
-'''
+
 
 # Task 3
 logging.info("\n=== Running Task 3 Experiments ===")\
@@ -89,3 +89,32 @@ for lr in learning_rates:
 print("\n=== Summary of Learning Rate Results ===")
 for lr, acc in lr_results:
     print(f"Learning Rate: {lr} | Test Accuracy: {acc:.4f}")
+
+'''
+
+# Task 4
+
+logging.info("\n=== Running Task 4 Experiments ===")
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu") # Set device to GPU if available, else CPU
+
+best_val_split = 0.1 # Assuming the best validation split is 0.1 based on previous results
+best_learning_rate = 0.1 # Assuming the best learning rate is 0.1 based on previous results
+
+logging.info(f"\nTraining with Learning Rate: {best_learning_rate}")
+loader = FashionMNISTLoader(batch_size=64, val_split=best_val_split) # Initialize the data loader with the best split
+train_loader, val_loader, test_loader = loader.get_loaders() # Get the data loaders
+logging.info(f"DataLoaders initialized with batch size 64 and val_split {best_val_split}")
+
+model = CNN() # Initialize the model
+optimizer = torch.optim.Adam(model.parameters(), lr=best_learning_rate) # Initialize the adam optimizer with the current learning rate
+trainer = Trainer(model, train_loader, test_loader, val_loader, optimizer, device=device) # Initialize the trainer
+
+trainer.train(epochs=10) # Train the model
+logging.info(f"Training completed for learning rate {best_learning_rate}.")
+
+
+adam_accuracy = trainer.evaluate() # Evaluate the model on the test set
+logging.info(f"Test Accuracy with Adam optimizer: {adam_accuracy:.4f}")
+print(f"Test Accuracy with Adam optimizer: {adam_accuracy:.4f}")
+
