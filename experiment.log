@@ -114,3 +114,7 @@ Training with Learning Rate: 0.1
 2025-04-14 19:44:51,237 - INFO - DataLoaders initialized with batch size 64 and val_split 0.1
 2025-04-14 19:47:33,626 - INFO - Training completed for learning rate 0.1.
 2025-04-14 19:47:36,568 - INFO - Test Accuracy with Adam optimizer: 0.1000
+2025-04-15 11:15:36,696 - INFO - 
+=== Running Task 5: One-vs-All AUC Evaluation ===
+2025-04-15 11:15:36,818 - INFO - DataLoaders initialized with batch size 64 and val_split 0.1
+2025-04-15 11:18:05,308 - INFO - AUC Score (class 2 vs all): 0.9917

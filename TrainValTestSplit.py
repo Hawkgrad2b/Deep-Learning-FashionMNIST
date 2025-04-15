@@ -1,11 +1,10 @@
 ### TASK 2
-
-
 import torch
 import torch.nn as nn
 from sklearn.metrics import accuracy_score
 from CNN import CNN  # Assuming CNN.py is in the same directory
-from FashionMNISTLoader import FashionMNISTLoader  # Assuming FashionMNISTLoader.py is in the same directory
+from sklearn.metrics import roc_auc_score  # Importing roc_auc_score for AUC calculation
+import torch.nn.functional as F # Importing functional module for softmax
 
 class Trainer:
     def __init__(self, model, train_loader, test_loader, val_loader=None, optimizer=None, loss_fn=None, device='cpu'):
@@ -81,11 +80,25 @@ class Trainer:
 
         return accuracy
     
+    def evaluate_auc(self, loader= None, pos_class= None):
+        self.model.eval() # Set the model to evaluation mode
+        loader = loader or self.test_loader # Use the test_loader if no loader is provided
+        pos_class = pos_class or 1 # Default positive class is 1
+        y_true, y_scores = [], []
+
+        # Iterate through the data loader
+        with torch.no_grad(): 
+            for images, labels in loader:
+                images, labels = images.to(self.device), labels.to(self.device)
+                outputs = F.softmax(self.model(images), dim=1) # Get the softmax probabilities
+                y_true.extend((labels == pos_class).cpu().numpy()) # Convert labels to binary (1 for positive class, 0 for negative class)
+                y_scores.extend(outputs[:, pos_class].cpu().numpy()) # Get the scores for the positive class
+
+        auc = roc_auc_score(y_true, y_scores) # Compute AUC score
+
+        return auc
 
 # === Running Task 2 Experiments ===
-
-
-
 """
 $ python Training-Testing.py 
 CNN(
@@ -100,8 +113,6 @@ CNN(
   (fc2): Linear(in_features=256, out_features=128, bias=True)
   (fc3): Linear(in_features=128, out_features=10, bias=True)
 )
-
-
 
 Training with Validation Split: 0%
 100.0%

@@ -1,0 +1,85 @@
+2025-04-15 11:36:38,107 - INFO - === Starting Experiment ===
+2025-04-15 11:36:38,107 - INFO - === Running Task 1 Experiments ===
+2025-04-15 11:36:38,110 - INFO - Model Architecture: CNN(
+  (conv1): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (pool1): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv2): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(2, 2))
+  (pool2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (conv3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (pool3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (flatten): Flatten(start_dim=1, end_dim=-1)
+  (fc1): Linear(in_features=1024, out_features=256, bias=True)
+  (fc2): Linear(in_features=256, out_features=128, bias=True)
+  (fc3): Linear(in_features=128, out_features=10, bias=True)
+)
+2025-04-15 11:36:38,112 - INFO - Model successfully initialized.
+2025-04-15 11:36:38,112 - INFO - === Running Task 2 Experiments ===
+2025-04-15 11:36:38,138 - INFO - 
+Training with Validation Split: 0%
+2025-04-15 11:36:38,176 - INFO - DataLoaders initialized with batch size 64 and val_split 0.0
+2025-04-15 11:39:28,341 - INFO - Training completed for 0% validation split.
+2025-04-15 11:39:30,996 - INFO - Test Accuracy with 0% val split: 0.8562
+2025-04-15 11:39:30,996 - INFO - 
+Training with Validation Split: 10%
+2025-04-15 11:39:31,042 - INFO - DataLoaders initialized with batch size 64 and val_split 0.1
+2025-04-15 11:42:05,176 - INFO - Training completed for 10% validation split.
+2025-04-15 11:42:07,819 - INFO - Test Accuracy with 10% val split: 0.8591
+2025-04-15 11:42:07,819 - INFO - 
+Training with Validation Split: 20%
+2025-04-15 11:42:07,855 - INFO - DataLoaders initialized with batch size 64 and val_split 0.2
+2025-04-15 11:44:24,209 - INFO - Training completed for 20% validation split.
+2025-04-15 11:44:26,739 - INFO - Test Accuracy with 20% val split: 0.8589
+2025-04-15 11:44:26,739 - INFO - 
+Training with Validation Split: 30%
+2025-04-15 11:44:26,775 - INFO - DataLoaders initialized with batch size 64 and val_split 0.3
+2025-04-15 11:46:26,281 - INFO - Training completed for 30% validation split.
+2025-04-15 11:46:28,933 - INFO - Test Accuracy with 30% val split: 0.8315
+2025-04-15 11:46:28,933 - INFO - 
+Training with Validation Split: 40%
+2025-04-15 11:46:28,970 - INFO - DataLoaders initialized with batch size 64 and val_split 0.4
+2025-04-15 11:48:11,377 - INFO - Training completed for 40% validation split.
+2025-04-15 11:48:14,021 - INFO - Test Accuracy with 40% val split: 0.8175
+2025-04-15 11:48:14,021 - INFO - 
+=== Summary of Results ===
+2025-04-15 11:48:14,022 - INFO - Val Split: 0% | Test Accuracy: 0.8562
+2025-04-15 11:48:14,022 - INFO - Val Split: 10% | Test Accuracy: 0.8591
+2025-04-15 11:48:14,022 - INFO - Val Split: 20% | Test Accuracy: 0.8589
+2025-04-15 11:48:14,022 - INFO - Val Split: 30% | Test Accuracy: 0.8315
+2025-04-15 11:48:14,023 - INFO - Val Split: 40% | Test Accuracy: 0.8175
+2025-04-15 11:48:14,023 - INFO - 
+=== Running Task 3 Experiments ===
+2025-04-15 11:48:14,023 - INFO - 
+Training with Learning Rate: 0.001
+2025-04-15 11:48:14,069 - INFO - DataLoaders initialized with batch size 64 and val_split 0.1
+2025-04-15 11:50:47,490 - INFO - Training completed for learning rate 0.001.
+2025-04-15 11:50:50,197 - INFO - Test Accuracy with learning rate 0.001: 0.5643
+2025-04-15 11:50:50,197 - INFO - 
+Training with Learning Rate: 0.01
+2025-04-15 11:50:50,233 - INFO - DataLoaders initialized with batch size 64 and val_split 0.1
+2025-04-15 11:53:25,137 - INFO - Training completed for learning rate 0.01.
+2025-04-15 11:53:27,812 - INFO - Test Accuracy with learning rate 0.01: 0.8504
+2025-04-15 11:53:27,813 - INFO - 
+Training with Learning Rate: 0.1
+2025-04-15 11:53:27,851 - INFO - DataLoaders initialized with batch size 64 and val_split 0.1
+2025-04-15 11:56:01,761 - INFO - Training completed for learning rate 0.1.
+2025-04-15 11:56:04,447 - INFO - Test Accuracy with learning rate 0.1: 0.9033
+2025-04-15 11:56:04,447 - INFO - 
+Training with Learning Rate: 1
+2025-04-15 11:56:04,486 - INFO - DataLoaders initialized with batch size 64 and val_split 0.1
+2025-04-15 11:58:38,783 - INFO - Training completed for learning rate 1.
+2025-04-15 11:58:41,429 - INFO - Test Accuracy with learning rate 1: 0.1000
+2025-04-15 11:58:41,429 - INFO - 
+Training with Learning Rate: 10
+2025-04-15 11:58:41,480 - INFO - DataLoaders initialized with batch size 64 and val_split 0.1
+2025-04-15 12:01:15,075 - INFO - Training completed for learning rate 10.
+2025-04-15 12:01:17,710 - INFO - Test Accuracy with learning rate 10: 0.1000
+2025-04-15 12:01:17,711 - INFO - 
+=== Running Task 4 Experiments ===
+2025-04-15 12:01:17,711 - INFO - 
+Training with Learning Rate: 0.1
+2025-04-15 12:01:17,751 - INFO - DataLoaders initialized with batch size 64 and val_split 0.1
+2025-04-15 12:03:55,536 - INFO - Test Accuracy with Adam optimizer: 0.1000
+2025-04-15 12:03:55,537 - INFO - 
+=== Running Task 5: One-vs-All AUC Evaluation ===
+2025-04-15 12:03:55,578 - INFO - DataLoaders initialized with batch size 64 and val_split 0.1
+2025-04-15 12:06:31,685 - INFO - AUC Score (class 2 vs all): 0.9910
